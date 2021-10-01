@@ -14,6 +14,6 @@ CREATE TABLE raw_video(
 	comments_disabled VARCHAR(500),
 	ratings_disabled VARCHAR(500),
 	video_error_or_removed VARCHAR(500),
-	description VARCHAR(10000),
+	description VARCHAR(20000),
 	country_code VARCHAR(500)
 );
