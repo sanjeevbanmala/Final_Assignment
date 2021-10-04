@@ -3,6 +3,7 @@ sys.path.append("/final_assignment/src/")
 import utils
 import utils.database_connection
 from extract_from_file import *
+from data_validation import *
 from load_data import *
 import os
 
@@ -21,6 +22,7 @@ if __name__ == "__main__":
     con = utils.database_connection.connect()
     cur = con.cursor()
     extract_raw_data()
+    #check_data_validity(cur,con)
     load_data_into_warehouse(cur,con)
     cur.close()
     con.close()
