@@ -4,7 +4,5 @@ SELECT
         WHEN COUNT(*) > 0 THEN 'failed'
         ELSE 'passed'
     END AS test_status
-FROM raw_video_archive
-WHERE CAST(publish_time AS TIMESTAMP) IS NOT NULL 
- AND 
-   CAST(trending_date AS DATE) IS NULL;
+FROM transform_video
+WHERE CAST(ratings_disabled AS BOOL) NOT IN(FALSE,TRUE);

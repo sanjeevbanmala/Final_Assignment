@@ -4,5 +4,5 @@ SELECT
         WHEN COUNT(*) > 0 THEN 'failed'
         ELSE 'passed'
     END AS test_status
-FROM raw_video_archive
-WHERE video_id IS NULL;
+FROM transform_video
+WHERE trending_date IS NULL;

@@ -36,7 +36,8 @@ thumbnail_link,
 comments_disabled,
 ratings_disabled,
 video_error_or_removed,
-description
+description,
+country_code
 FROM raw_video;
 END;
 $$;

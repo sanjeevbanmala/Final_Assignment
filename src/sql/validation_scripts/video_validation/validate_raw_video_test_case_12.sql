@@ -4,5 +4,5 @@ SELECT
         WHEN COUNT(*) > 0 THEN 'failed'
         ELSE 'passed'
     END AS test_status
-FROM raw_video_archive
-WHERE CAST(trending_date AS DATE) >= CURRENT_DATE;
+FROM transform_video
+WHERE title IS NULL;

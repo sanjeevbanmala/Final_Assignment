@@ -7,6 +7,7 @@ from data_validation import *
 from load_data import *
 import os
 
+
 def extract_raw_data():
     the_dir = 'E:\Final_Assignment\data'
     all_csv_files = filter(lambda x: x.endswith('.csv'), os.listdir(the_dir))
@@ -22,8 +23,11 @@ if __name__ == "__main__":
     con = utils.database_connection.connect()
     cur = con.cursor()
     extract_raw_data()
-    #check_data_validity(cur,con)
-    load_data_into_warehouse(cur,con)
+    count_error_in_video_validation=check_video_data_validity(cur,con)
+    count_error_in_category_validation=check_category_data_validity(cur,con)
+    if(count_error_in_video_validation==0):
+        if(count_error_in_category_validation==0):
+            load_data_into_warehouse(cur,con)
     cur.close()
     con.close()
     

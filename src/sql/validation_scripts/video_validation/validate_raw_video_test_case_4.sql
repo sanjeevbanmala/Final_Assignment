@@ -4,5 +4,5 @@ SELECT
         WHEN COUNT(*) > 0 THEN 'failed'
         ELSE 'passed'
     END AS test_status
-FROM raw_video_archive
-WHERE CAST (views AS INT) <= 0;
+FROM transform_video
+WHERE CAST (likes AS INT) < 0;

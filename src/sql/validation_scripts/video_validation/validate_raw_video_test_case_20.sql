@@ -4,5 +4,8 @@ SELECT
         WHEN COUNT(*) > 0 THEN 'failed'
         ELSE 'passed'
     END AS test_status
-FROM raw_video_archive
-WHERE CAST (comment_count AS INT) < 0;
+FROM (
+	SELECT country_code FROM raw_video
+	EXCEPT
+	SELECT country_code FROM transform_video
+)result;

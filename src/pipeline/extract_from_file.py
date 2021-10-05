@@ -1,4 +1,5 @@
 import json
+from data_validation import *
 
 def extract_video_from_raw(cur,con,filePath):
     fileName = "'"+filePath[25:27]+"'"
@@ -28,7 +29,13 @@ def main_extract_video(cur,con,filePath):
     
     extract_video_from_raw(cur,con,filePath)
     transform_video_from_raw(cur,con)
-    incremental_extract_to_archive(cur,con,filePath)
+    count_error=check_video_data_validity(cur,con)
+    if(count_error==0):
+        incremental_extract_to_archive(cur,con,filePath)
+        print("Extraction successfull for "+filePath[25:])
+    else:
+        print
+    
 
 def delete_data_from_raw_category(cur,con):
     truncate_query = "TRUNCATE TABLE raw_category;"
@@ -56,7 +63,9 @@ def incremental_save_category_to_archive(cur,con):
 def main_extract_category(cur,con,filePath):
     delete_data_from_raw_category(cur,con)
     extract_category_from_raw(cur,con,filePath)
-    incremental_save_category_to_archive(cur,con)
-
-
-
+    count_error=check_category_data_validity(cur,con)
+    if(count_error==0):
+        incremental_save_category_to_archive(cur,con)
+        print("Extraction successfull for "+filePath[11:])
+    else:
+        print
