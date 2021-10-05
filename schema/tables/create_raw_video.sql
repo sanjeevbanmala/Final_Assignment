@@ -1,3 +1,4 @@
+---- create table script for raw_video
 CREATE TABLE raw_video(
 	video_id VARCHAR(500),
 	trending_date VARCHAR(500),

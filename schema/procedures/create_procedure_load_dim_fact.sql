@@ -1,3 +1,9 @@
+/*
+  This procedure is used for loading data in fact and dimension tables.
+  At first, it truncates all the data in fact and dimension table with cascade.
+  Then, it inserts in all the dimension tables.
+  Then, it loads data in act table.
+*/
 CREATE OR REPLACE PROCEDURE load_dim_fact_tables()
 LANGUAGE plpgsql
 AS $$
@@ -16,8 +22,8 @@ SELECT
 FROM raw_video_archive;
 
 INSERT INTO dim_channel(channel_title)
-SELECT DISTINCT channel_title 
-FROM raw_video_archive;
+  SELECT DISTINCT channel_title 
+  FROM raw_video_archive;
 
 INSERT INTO dim_country
 SELECT DISTINCT country_code,

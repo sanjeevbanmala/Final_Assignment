@@ -1,3 +1,12 @@
+/* 
+  This procedure does the extraction for csv files.
+  The procedure takes two parameters filePath and country_code.
+  It uses COPY command of postgresql for bulk import to extract all the field from csv files.
+  The copy command uses filePath parameter to detect which file to bulk import.
+  The second parameter country_code is supplied to update all the bulk imported data with country_code. 
+  The first parameter can be called with $1 and second with $2 easily.
+  
+*/
 CREATE OR REPLACE PROCEDURE extract_video(filePath VARCHAR, country_code VARCHAR)
 LANGUAGE plpgsql
 AS $$

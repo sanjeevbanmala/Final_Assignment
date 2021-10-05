@@ -30,3 +30,50 @@ The following are the possible facts and dimensions:
 
 # Conceptual Model
 ![](./img/conceptual_model.png)
+
+## Identifying Attributes and Relationships between the Fact and Dimension Tables
+### dim_country
+Attributes | Description | Domain
+---------- | ----------- | ------
+country_code | The identifier for dim_country. | TEXT, PK
+country | The name of the country. | TEXT
+
+### dim_channel
+Attributes | Description | Domain
+---------- | ----------- | ------
+channel_id | The identifier for dim_channel. | SERIAL, PK
+channel_title | The name of the channel. | TEXT
+
+### dim_category
+Attributes | Description | Domain
+---------- | ----------- | ------
+category_id | The identifier for dim_category. | INT, PK
+category_title | The name of the ctegory. | TEXT
+
+### dim_date
+Attributes | Description | Domain
+---------- | ----------- | ------
+date_id | The identifier for dim_date. | SERIAL, PK
+trending_date | The date when the video was on trending. | DATE
+publish_time | The date and time when the video was published. | TIMESTAMP
+
+### fact_video
+Attributes | Description | Domain
+---------- | ----------- | ------
+id | The identifier for fact_video. | SERIAL, PK
+date_id | The id of the date. | INT, FK
+category_id | The id of the category. | INT, FK
+country_code | The id of the country. | TEXT, FK
+channel_id | The id of the channel. | INT, FK
+title | The title of the video. | TEXT
+views | The total views of the video. | INT
+likes | The total likes of the video. | INT
+dislikes | The total dislikes of the video. | INT
+comment_count | The total comments of the video. | INT
+commens_disabled | The comments are disabled or not. | BOOL 
+ratings_disabled | The ratings are disabled or not. | BOOL
+video_error_or_removed | The video has error or removed or not. | BOOL
+description | The description of the video. | TEXT
+
+# Physical Model
+![](./img/physical_model.png)

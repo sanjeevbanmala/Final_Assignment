@@ -1,3 +1,4 @@
+-- create table script for transform_video
 CREATE TABLE transform_video(
 	video_id VARCHAR(500),
 	trending_date VARCHAR(500),

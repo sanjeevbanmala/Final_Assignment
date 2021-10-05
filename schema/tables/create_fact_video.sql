@@ -1,3 +1,4 @@
+-- create table script for fact_video
 CREATE TABLE fact_video(
 	id SERIAL PRIMARY KEY,
 	date_id INT,
