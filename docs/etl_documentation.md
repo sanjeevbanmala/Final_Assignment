@@ -473,32 +473,32 @@ Task Scheduler in Windows
 
 To, create a task, click on Create Basic Task.
 
-![](./img/schedule_window.png)
+![](./img/schedule_window.PNG)
 
 Then, providing name and description of the task.
 
-![](./img/schedule_naming.png)
+![](./img/schedule_naming.PNG)
 
 Then, selecting when to start the task.
 
-![](./img/weekly.png)
+![](./img/weekly.PNG)
 
 Selecting exact day and time.
 
-![](./img/time.png)
+![](./img/time.PNG)
 
 Then, selecting start a program.
 
-![](./img/program.png)
+![](./img/program.PNG)
 
 Providing path of python and script to be scheduled.
 
-![](./img/path.png)
+![](./img/path.PNG)
 
 Finally, click on finish to complete the task setup.
 
-![](./img/finish.png)
+![](./img/finish.PNG)
 
 Finally, we can see that our scheduled task `YouTube_ETL_Scheduler` is ready and will run every week on saturday.
 
-![](./img/final.png)
+![](./img/final.PNG)
