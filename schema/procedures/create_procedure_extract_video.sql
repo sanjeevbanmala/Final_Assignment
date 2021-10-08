@@ -33,7 +33,7 @@ COPY raw_video(
 ) 
 FROM '''||$1||'''
 WITH CSV HEADER
-ENCODING ''latin-1''';
+ENCODING ''utf-8''';
 UPDATE raw_video 
 SET country_code = ''||$2||'';
 END;
