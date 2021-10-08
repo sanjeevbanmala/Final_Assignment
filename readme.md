@@ -28,7 +28,7 @@ The data for this project can be downloaded from here [click here](https://www.k
    - Do comments increase with increase in like?
    - For more you can look to docs/data_visualization.md
 
-# The data can also be used for othe rpurpose than this project like:
+# The data can also be used for othe purpose than this project like:
 
 * Sentiment Analysis
 * Training ML algorithms like RNNs to generate their own YouTube comments.
