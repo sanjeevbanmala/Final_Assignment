@@ -7,6 +7,10 @@ I have created a calculated field called total_days_to_be_on_trending in POWER B
 
 The visiualizations I have made in Power BI are as folllows:
 
+Link to Power BI dashboard :[click here](https://app.powerbi.com/reportEmbed?reportId=b0745ec7-efde-4b8a-ba7a-c45ee311eb82&autoAuth=true&ctid=3d9c8972-7e47-4ab7-93c3-7ca0b652b787&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXVzLWVhc3QyLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D) 
+
+Note: You should login to view this dashboard.
+
 * YouTube Video Dashboard 1
 
 ![](./img/dashboard1.PNG)

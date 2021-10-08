@@ -322,23 +322,23 @@ if __name__ == "__main__":
 
 * dim_country
 
-![](./img/dim_country.png)
+![](./img/dim_country.PNG)
 
 * dim_channel
 
-![](./img/dim_channel.png)
+![](./img/dim_channel.PNG)
 
 * dim_category
 
-![](./img/dim_category.png)
+![](./img/dim_category.PNG)
 
 * dim_date
 
-![](./img/dim_date.png)
+![](./img/dim_date.PNG)
 
 * fact_video
 
-![](./img/fact_video.png)
+![](./img/fact_video.PNG)
 
 ## How incremental approach works?
 
